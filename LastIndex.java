@@ -29,7 +29,10 @@ public class LastIndex {
 
             if(a[mid]==data)
             {
-                l=mid+1;
+                if(mid<n-1 && a[mid+1]==data)
+                    l=mid+1;
+                else
+                    return mid;
             }
             else if(data<a[mid])
             {

@@ -29,7 +29,10 @@ public class FirstIndex {
 
             if(a[mid]==data)
             {
-                h=mid-1;
+                if(mid>0 && a[mid-1]==data)
+                    h=mid-1;
+                else
+                    return mid;
             }
             
             else if(data<a[mid])
